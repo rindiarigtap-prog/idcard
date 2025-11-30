@@ -1,35 +1,169 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kartu Identitas Anak</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kartu Identitas Anak</title>
+
+<style>
+body {
+  margin:0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(160deg,#b00000,#ff4d4d,#ffffff);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.card {
+  background:white;
+  width:360px;
+  border-radius:18px;
+  box-shadow:0 15px 35px rgba(0,0,0,.3);
+  overflow:hidden;
+  text-align:center;
+  animation: fadeIn .8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform:scale(.96);}
+  to {opacity:1; transform:scale(1);}
+}
+
+/* HEADER */
+.header {
+  background:linear-gradient(90deg,#e60000,#b00000);
+  color:white;
+  padding:14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo {
+  background:white;
+  color:#b00000;
+  font-weight:bold;
+  padding:4px 10px;
+  border-radius:6px;
+  font-size:14px;
+}
+
+.title {
+  font-weight:bold;
+  letter-spacing:1px;
+  font-size:13px;
+}
+
+/* PHOTO */
+.photo-box {
+  margin-top:-45px;
+}
+
+.photo {
+  width:140px;
+  height:180px;
+  object-fit:cover;
+  border-radius:14px;
+  border:5px solid white;
+  box-shadow:0 6px 15px rgba(0,0,0,.25);
+}
+
+/* CONTENT */
+.info {
+  padding:12px 20px;
+}
+
+.info h2 {
+  margin:10px 0 6px;
+  font-size:18px;
+}
+
+.data {
+  background:#f6f6f6;
+  padding:8px;
+  border-radius:8px;
+  font-size:14px;
+  margin-bottom:6px;
+}
+
+.id {
+  background:#fff3f3;
+  color:#b00000;
+  font-weight:bold;
+}
+
+/* BUTTON */
+.button {
+  display:block;
+  margin:12px 20px;
+  background:linear-gradient(90deg,#e60000,#b00000);
+  color:white;
+  padding:12px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 6px 12px rgba(0,0,0,.25);
+  transition:.3s;
+}
+
+.button:hover {
+  background:linear-gradient(90deg,#b00000,#7a0000);
+}
+
+/* FOOTER */
+.note {
+  font-size:12px;
+  color:#555;
+  padding:8px 16px 14px;
+}
+
+/* WATERMARK */
+.watermark {
+  opacity:.08;
+  position:absolute;
+  font-weight:bold;
+  font-size:80px;
+  transform:rotate(-20deg);
+  color:black;
+  top:35%;
+}
+</style>
+
 </head>
 <body>
 
+<div class="watermark">KAI</div>
+
 <div class="card">
+
   <div class="header">
     <div class="logo">KAI</div>
     <div class="title">KARTU IDENTITAS ANAK</div>
   </div>
 
-  <img src="photo.jpg" class="photo" alt="Foto">
+  <div class="photo-box">
+    <img src="photo.jpg" class="photo">
+  </div>
 
   <div class="info">
     <h2>Muhammad Abizaar Tsabit Arigta Putra</h2>
-    <p><b>Sekolah:</b> SDN Miji 1 Kota Mojokerto</p>
-    <p><b>Kelas:</b> 1 (Satu)</p>
-    <p><b>ID Kartu:</b> CARD-2025-001</p>
+
+    <div class="data">🏫 SDN Miji 1 Kota Mojokerto</div>
+    <div class="data">🎒 Kelas 1 (Satu)</div>
+    <div class="data id">🆔 CARD-2025-001</div>
   </div>
 
-  <a class="button" href="mailto:ISI_EMAIL?subject=Kartu%20Ditemukan">
-    Hubungi Orang Tua : Rindiarigtap@gmail.com
+  <a class="button" href="mailto:rindiarigtap@gmail.com?subject=Kartu%20Anak%20Ditemukan">
+    📩 HUBUNGI ORANG TUA
   </a>
 
   <div class="note">
-    Mohon Segera Menghubungi, apabila kartu ini anda temukan, Terima kasih!
+    Mohon Segera Menghubungi apabila kartu ini Anda temukan.<br>
+    <b>Terima kasih atas bantuan Anda.</b>
   </div>
+
 </div>
 
 </body>
